@@ -27,7 +27,7 @@ jobs:
         pip install selenium webdriver-manager  # Manuel olarak gerekli paketleri yükler
 
     - name: Run Python script
-      run: python your_script.py  # Python betiğini çalıştırır
+      run: python base_url.py  # Python betiğini çalıştırır
 
     - name: Commit and push updated base_url.txt
       run: |
