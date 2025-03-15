@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Web sayfasının URL'sini belirle
-url = 'https://www.ornekwebsite.com'
+url = 'https://trgoals1234.xyz/'
 
 # HTML içeriğini al
 response = requests.get(url)
