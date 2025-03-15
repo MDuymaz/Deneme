@@ -1,25 +1,43 @@
-name: Run base_url.py Manually
+name: Run Python Script and Update base_url.txt
 
 on:
-  workflow_dispatch: # Manuel tetikleme için
+  push:
+    branches:
+      - main  # Ana dalda değişiklik olduğunda tetiklenecek
+  pull_request:
+    branches:
+      - main  # Ana dalda yapılan pull request'lerde tetiklenecek
 
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest  # Ubuntu ortamında çalışacak
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2  # Depoyu çekin
+    - name: Checkout code
+      uses: actions/checkout@v2  # GitHub reposundan kodu çeker
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'  # Kullanmak istediğiniz Python sürümünü belirleyin
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'  # Python 3.9 sürümü kullanılacak
 
-      - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4  # Gerekli kütüphaneleri yükleyin
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # Python bağımlılıklarını yükler
 
-      - name: Run base_url.py
-        run: |
-          python base_url.py  # Python scriptini çalıştırın
+    - name: Install WebDriver Manager
+      run: pip install webdriver-manager  # WebDriver manager'ı yükler
+
+    - name: Run Python script
+      run: python your_script.py  # Python betiğini çalıştırır
+
+    - name: Commit and push updated base_url.txt
+      run: |
+        git config --global user.email "youremail@example.com"
+        git config --global user.name "Your Name"
+        git add base_url.txt  # base_url.txt dosyasını git'e ekler
+        git commit -m "Update base_url.txt"  # Güncelleme mesajı
+        git push origin main  # Değişiklikleri main dalına gönderir
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token kullanılarak push işlemi yapılır
