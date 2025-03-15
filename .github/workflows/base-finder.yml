@@ -1,0 +1,25 @@
+name: Run base_url.py Manually
+
+on:
+  workflow_dispatch: # Manuel tetikleme için
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Ubuntu ortamında çalışacak
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Depoyu çekin
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'  # Kullanmak istediğiniz Python sürümünü belirleyin
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4  # Gerekli kütüphaneleri yükleyin
+
+      - name: Run base_url.py
+        run: |
+          python base_url.py  # Python scriptini çalıştırın
