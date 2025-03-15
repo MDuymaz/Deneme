@@ -15,7 +15,7 @@ chrome_options.add_argument("--disable-dev-shm-usage")  # /dev/shm kullanımın�
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
 # Sayfayı aç
-url = "https://trgoals1235.xyz//channel.html?id=yayin1"
+url = "https://t.ly/eJkwq"
 driver.get(url)
 
 # Sayfanın tamamen yüklenmesi için bir süre bekle
