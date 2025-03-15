@@ -28,23 +28,23 @@ baseurl = driver.execute_script("return baseurl;")
 print("Base URL:", baseurl)
 
 # base_url.txt dosyasını oku ve mevcut baseurl ile karşılaştır
-if os.path.exists('base_url.txt'):
-    with open('base_url.txt', 'r', encoding='utf-8') as file:
+base_url_file_path = 'base_url.txt'
+
+# Eğer base_url.txt dosyası varsa, mevcut baseurl'i oku
+if os.path.exists(base_url_file_path):
+    with open(base_url_file_path, 'r', encoding='utf-8') as file:
         current_baseurl = file.read().strip()
 else:
     current_baseurl = ""
 
-# Eğer baseurl değiştiyse, güncelle
-if baseurl != current_baseurl:
-    # base_url.txt dosyasını yaz
-    try:
-        with open('base_url.txt', 'w', encoding='utf-8') as file:
-            file.write(baseurl)
-        print("Base URL güncellendi.")
-    except Exception as e:
-        print(f"Base URL yazılırken bir hata oluştu: {e}")
-else:
-    print("Base URL aynıdır.")
+# baseurl, dosyadaki mevcut baseurl ile aynı olsa bile dosyaya yazmaya devam et
+try:
+    # Dosyayı yazma işlemi
+    with open(base_url_file_path, 'w', encoding='utf-8') as file:
+        file.write(baseurl)
+    print("Base URL yazıldı.")
+except Exception as e:
+    print(f"Base URL yazılırken bir hata oluştu: {e}")
 
 # Tarayıcıyı kapat
 driver.quit()
