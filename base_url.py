@@ -1,31 +1,24 @@
 import requests
-from bs4 import BeautifulSoup
 
-# Web sayfasının URL'sini belirle
-url = 'https://trgoals1234.xyz/'
+# URL'yi tanımla
+url = "https://trgoals1235.xyz/"
 
-# HTML içeriğini al
+# Siteye istek gönder
 response = requests.get(url)
 
-# İstek başarılı ise içeriği işleme
+# İstek başarılıysa, HTML içeriğini kontrol et
 if response.status_code == 200:
-    # Web sayfasının HTML içeriğini al
-    content = response.text
+    html_content = response.text
 
-    # BeautifulSoup ile HTML'yi çözümle
-    soup = BeautifulSoup(content, 'html.parser')
-
-    # m3u8 uzantılı linkleri bul
-    m3u8_links = []
-    for link in soup.find_all('a', href=True):
-        if 'workers' in link['href']:
-            m3u8_links.append(link['href'])
-
-    # Linkleri bir TXT dosyasına yaz
-    with open('m3u8_links.txt', 'w', encoding='utf-8') as file:
-        for m3u8_link in m3u8_links:
-            file.write(m3u8_link + '\n')
-    
-    print("m3u8 linkleri başarıyla txt dosyasına yazıldı.")
+    # HTML içinde 'workers' kelimesini ara
+    if "workers" in html_content:
+        print("HTML içinde 'workers' kelimesi bulundu.")
+        
+        # HTML içeriğini base_url.txt dosyasına yazdır
+        with open("base_url.txt", "w", encoding="utf-8") as file:
+            file.write(html_content)
+        print("HTML içeriği base_url.txt dosyasına yazıldı.")
+    else:
+        print("HTML içinde 'workers' kelimesi bulunamadı.")
 else:
-    print("Web sayfasına erişilemedi:", response.status_code)
+    print(f"Siteye erişilemedi. HTTP Durum Kodu: {response.status_code}")
