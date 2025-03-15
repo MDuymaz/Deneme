@@ -27,16 +27,16 @@ time.sleep(5)
 # Sayfanın HTML içeriğini al
 html_content = driver.page_source
 
-# 'workers' kelimesini ara
-if "workers" in html_content:
-    print("HTML içinde 'workers' kelimesi bulundu.")
+# 'baseurl' kelimesini ara
+if "baseurl" in html_content:
+    print("HTML içinde 'baseurl' kelimesi bulundu.")
     
     # HTML içeriğini base_url.txt dosyasına yazdır
     with open("base_url.txt", "w", encoding="utf-8") as file:
         file.write(html_content)
     print("HTML içeriği base_url.txt dosyasına yazıldı.")
 else:
-    print("HTML içinde 'workers' kelimesi bulunamadı.")
+    print("HTML içinde 'baseurl' kelimesi bulunamadı.")
 
 # Tarayıcıyı kapat
 driver.quit()
