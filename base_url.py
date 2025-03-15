@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+import os
 
 # Chrome seçeneklerini ayarla
 chrome_options = Options()
@@ -26,11 +27,22 @@ baseurl = driver.execute_script("return baseurl;")
 # baseurl'i yazdır
 print("Base URL:", baseurl)
 
-# base_url.txt dosyasına baseurl yaz
-with open("base_url.txt", "w", encoding="utf-8") as file:
-    file.write(baseurl)
+# base_url.txt dosyasını yazma
+base_url_file_path = 'base_url.txt'
 
-print("Base URL dosyaya yazıldı.")
+# Dosya var mı kontrol et
+if not os.path.exists(base_url_file_path):
+    print(f"{base_url_file_path} dosyası bulunamadı, yeni dosya oluşturulacak.")
+else:
+    print(f"{base_url_file_path} dosyası bulundu.")
+
+# baseurl'i base_url.txt dosyasına yaz
+try:
+    with open(base_url_file_path, 'w', encoding='utf-8') as file:
+        file.write(baseurl)
+    print(f"Base URL dosyaya başarıyla yazıldı: {baseurl}")
+except Exception as e:
+    print(f"Dosyaya yazma hatası: {e}")
 
 # Tarayıcıyı kapat
 driver.quit()
