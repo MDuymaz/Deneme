@@ -1,40 +1,86 @@
-name: Run Python Script and Update base_url.txt
+name: Update base_url.txt if necessary
 
 on:
-  push:
-    branches:
-      - main  # Ana dalda değişiklik olduğunda tetiklenecek
-  pull_request:
-    branches:
-      - main  # Ana dalda yapılan pull request'lerde tetiklenecek
+  schedule:
+    - cron: '0 * * * *'  # Bu işlem her saat başı çalışacak. Zamanı ihtiyaca göre ayarlayabilirsiniz.
+  workflow_dispatch:  # Manuel çalıştırma için
+    inputs:
+      url:
+        description: 'The URL to check for baseurl'
+        required: true
+        default: 'https://trgoals1235.xyz//channel.html?id=yayin1'  # Varsayılan URL
 
 jobs:
-  build:
-    runs-on: ubuntu-latest  # Ubuntu ortamında çalışacak
+  check_baseurl:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2  # GitHub reposundan kodu çeker
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'  # Python 3.9 sürümü kullanılacak
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Python sürümünü istediğiniz gibi ayarlayabilirsiniz
 
-    - name: Install dependencies manually
-      run: |
-        python -m pip install --upgrade pip  # pip'i günceller
-        pip install selenium webdriver-manager  # Manuel olarak gerekli paketleri yükler
+      - name: Install dependencies
+        run: |
+          pip install selenium webdriver-manager
 
-    - name: Run Python script
-      run: python base_url.py  # Python betiğini çalıştırır
+      - name: Run Python script to check and update base_url.txt
+        run: |
+          python <<EOF
+          from selenium import webdriver
+          from selenium.webdriver.chrome.service import Service
+          from selenium.webdriver.chrome.options import Options
+          from webdriver_manager.chrome import ChromeDriverManager
+          import time
+          import os
 
-    - name: Commit and push updated base_url.txt
-      run: |
-        git config --global user.email "youremail@example.com"
-        git config --global user.name "Your Name"
-        git add base_url.txt  # base_url.txt dosyasını git'e ekler
-        git commit -m "Update base_url.txt"  # Güncelleme mesajı
-        git push origin main  # Değişiklikleri main dalına gönderir
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token kullanılarak push işlemi yapılır
+          # URL'yi al
+          url = "${{ github.event.inputs.url }}"
+
+          # Chrome seçeneklerini ayarla
+          chrome_options = Options()
+          chrome_options.add_argument("--headless")  # Başsız (headless) modda çalıştırmak için
+          chrome_options.add_argument("--no-sandbox")
+          chrome_options.add_argument("--disable-dev-shm-usage")
+
+          # Tarayıcıyı başlatmak için gerekli path ve driver'ı ayarla
+          driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+          # Sayfayı aç
+          driver.get(url)
+
+          # Sayfanın tamamen yüklenmesi için bekle
+          time.sleep(5)
+
+          # JavaScript ile tanımlanmış olan baseurl değişkenini almak
+          baseurl = driver.execute_script("return baseurl;")
+
+          # base_url.txt dosyasını oku ve mevcut baseurl ile karşılaştır
+          if os.path.exists('base_url.txt'):
+              with open('base_url.txt', 'r', encoding='utf-8') as file:
+                  current_baseurl = file.read().strip()
+          else:
+              current_baseurl = ""
+
+          # Eğer baseurl değiştiyse, güncelle
+          if baseurl != current_baseurl:
+              print(f"Base URL değişti: {baseurl}")
+              with open('base_url.txt', 'w', encoding='utf-8') as file:
+                  file.write(baseurl)
+              print("base_url.txt dosyası güncellendi.")
+          else:
+              print("Güncelleme gerek yok.")
+          
+          # Tarayıcıyı kapat
+          driver.quit()
+          EOF
+
+      - name: Commit and push changes if base_url.txt was updated
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add base_url.txt
+          git diff --exit-code || (git commit -m "Update base_url.txt" && git push)
