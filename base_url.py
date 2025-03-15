@@ -1,16 +1,20 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Chrome seçeneklerini ayarla
 chrome_options = Options()
 
-# Farklı bir kullanıcı veri dizini kullan
-chrome_options.add_argument("--user-data-dir=/tmp/chrome-data")  # Geçici bir dizin oluşturulabilir
+# User data directory ile ilgili hatayı engellemek için --no-sandbox ve --disable-dev-shm-usage ekleyelim
+chrome_options.add_argument("--no-sandbox")  # Sandbox kullanmamak
+chrome_options.add_argument("--disable-dev-shm-usage")  # /dev/shm kullanımını engelle
 
-# WebDriver'ı başlat
+# Başsız (headless) modda çalıştırmak isterseniz
+chrome_options.add_argument("--headless")  # GUI'siz modda çalıştır
+
+# Tarayıcıyı başlatmak için gerekli path ve driver'ı ayarla
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
 # Sayfayı aç
