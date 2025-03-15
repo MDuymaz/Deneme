@@ -27,7 +27,7 @@ baseurl = driver.execute_script("return baseurl;")
 # baseurl'i yazdır
 print("Base URL:", baseurl)
 
-# base_url.txt dosyasını yazma
+# base_url.txt dosyasının yolunu tanımla
 base_url_file_path = 'base_url.txt'
 
 # Dosya var mı kontrol et
@@ -43,6 +43,11 @@ try:
     print(f"Base URL dosyaya başarıyla yazıldı: {baseurl}")
 except Exception as e:
     print(f"Dosyaya yazma hatası: {e}")
+
+# Yazdıktan sonra dosyayı tekrar oku ve kontrol et
+with open(base_url_file_path, 'r', encoding='utf-8') as file:
+    file_content = file.read()
+    print(f"Dosya içeriği: {file_content}")
 
 # Tarayıcıyı kapat
 driver.quit()
