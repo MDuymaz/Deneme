@@ -18,7 +18,7 @@ if response.status_code == 200:
     # m3u8 uzantılı linkleri bul
     m3u8_links = []
     for link in soup.find_all('a', href=True):
-        if 'm3u8' in link['href']:
+        if 'workers' in link['href']:
             m3u8_links.append(link['href'])
 
     # Linkleri bir TXT dosyasına yaz
