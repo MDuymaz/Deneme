@@ -1,8 +1,6 @@
 name: Run base_url.py script
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # Bu işlem her saat başı çalışacak. Zamanı ihtiyaca göre ayarlayabilirsiniz.
   workflow_dispatch:  # Manuel çalıştırma için
 
 jobs:
