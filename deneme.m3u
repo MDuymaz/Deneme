@@ -7,6 +7,7 @@
 # Kanal Adı: Kanal 1
 # Kanal Açıklaması: Popüler müzik kanalı
 #EXTINF:2, Kanal 1 - Popüler Müzik
+#EXTVLCOPT:http-referrer=https://www.selcuksports102.top/
 https://edge10.xmediaget.com/hls-live/15667162/1/media1742164044369segment3425.ts?s=f9f992473dd2c2688bd8424e5d9b40ee476fec574228fd629c06418bf2d5583a&t=1742163975023&ai=3&av=1025&ui=0
 
 # Kanal Adı: Kanal 2
