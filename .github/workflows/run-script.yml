@@ -1,0 +1,24 @@
+name: Run Stream Script
+
+on:
+  workflow_dispatch:  # Manuel olarak tetiklenebilir
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Ubuntu üzerine çalışacak
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Reposu checkout yapıyoruz (opsiyonel, eğer bir repo kullanıyorsanız)
+      
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'  # Python 3.8 kullanılıyor
+
+      - name: Install dependencies
+        run: |
+          pip install requests  # Gerekli kütüphaneyi yüklüyoruz
+
+      - name: Run Python Script
+        run: |
+          python3 stream_script.py  # Python scriptinizi çalıştırıyoruz (stream_script.py, sizin kodunuz)
