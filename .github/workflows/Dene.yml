@@ -1,0 +1,32 @@
+name: Python application
+
+on:
+  push:
+    branches:
+      - main  # 'main' branch'ına her push işlemi yapıldığında çalışacak
+  pull_request:
+    branches:
+      - main  # Pull request'ler için de çalışacak
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest  # GitHub Actions, Linux ortamında çalışacak
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Kodunuzu GitHub'dan çeker
+
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # Python 3.8 sürümünü kullanabiliriz
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip  # pip güncelleme
+        pip install -r requirements.txt  # Bağımlılıkları yükle
+
+    - name: Run script
+      run: |
+        python stream_script.py  # Python dosyasını çalıştırır
+
