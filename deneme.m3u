@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://raw.githubusercontent.com/MDuymaz/Deneme/refs/heads/main/epg.xml"
+#EXTM3U url-tvg="https://raw.githubusercontent.com/MDuymaz/Deneme/refs/heads/main/deneme.xml"
 
 #EXTINF:-1 tvg-id="NICKELODEON HD" tvg-name="NICKELODEON HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6c/Nickelodeon_Logo.png" tvg-language="Turkish" tvg-country="TR" group-title="CANLI",NICKELODEON HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
