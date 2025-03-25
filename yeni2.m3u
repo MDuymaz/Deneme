@@ -15,10 +15,15 @@ https://vavoo.to/play/2781429267/index.m3u8
 #EXTVLCOPT:http-referrer=https://vavoo.to/
 https://vavoo.to/play/2430655089/index.m3u8
 
-#EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 02:00 ORLANDO MAGIC - LA LAKERS
+#EXTINF:-1 tvg-id="None" tvg-name="S SPORT" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", S SPORT 02:00 ORLANDO MAGIC - LA LAKERS
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
 #EXTVLCOPT:http-referrer=https://vavoo.to/
-https://vavoo.to/play/2430655089/index.m3u8
+https://vavoo.to/play/3718336295/index.m3u8
+
+#EXTINF:-1 tvg-id="None" tvg-name="S SPORT" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", S SPORT 02:00 ORLANDO MAGIC - LA LAKERS
+#EXTVLCOPT:http-user-agent=VAVOO/1.0
+#EXTVLCOPT:http-referrer=https://vavoo.to/
+https://vavoo.to/play/3718336295/index.m3u8
 
 #EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 02:00 WASHINGTON WIZARDS - TORONTO RAPTORS
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
@@ -450,10 +455,15 @@ https://vavoo.to/play/1540748539/index.m3u8
 #EXTVLCOPT:http-referrer=https://vavoo.to/
 https://vavoo.to/play/1540748539/index.m3u8
 
-#EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 20:00 BAHÇEŞEHIR KLJ - GRAN CANARIA
+#EXTINF:-1 tvg-id="None" tvg-name="TRT SPOR YILDIZ" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", TRT SPOR YILDIZ 20:00 BAHÇEŞEHIR KLJ - GRAN CANARIA
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
 #EXTVLCOPT:http-referrer=https://vavoo.to/
-https://vavoo.to/play/2430655089/index.m3u8
+https://vavoo.to/play/93054202/index.m3u8
+
+#EXTINF:-1 tvg-id="None" tvg-name="TRT SPOR YILDIZ" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", TRT SPOR YILDIZ 20:00 BAHÇEŞEHIR KLJ - GRAN CANARIA
+#EXTVLCOPT:http-user-agent=VAVOO/1.0
+#EXTVLCOPT:http-referrer=https://vavoo.to/
+https://vavoo.to/play/93054202/index.m3u8
 
 #EXTINF:-1 tvg-id="None" tvg-name="S SPORT" tvg-logo="https://t4.ftcdn.net/jpg/01/57/34/25/360_F_157342588_54ZpX48MoK3mdBh0PqnwWdQnMY3KDB29.jpg" group-title="SPOR EKRANI", S SPORT 20:00 EUROLEAGUE MAÇA DOĞRU
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
@@ -490,10 +500,15 @@ https://vavoo.to/play/4017295127/index.m3u8
 #EXTVLCOPT:http-referrer=https://vavoo.to/
 https://vavoo.to/play/4017295127/index.m3u8
 
-#EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 20:30 GALATASARAY - MANISA BB
+#EXTINF:-1 tvg-id="None" tvg-name="TRT SPOR" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", TRT SPOR 20:30 GALATASARAY - MANISA BB
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
 #EXTVLCOPT:http-referrer=https://vavoo.to/
-https://vavoo.to/play/2430655089/index.m3u8
+https://vavoo.to/play/2781429267/index.m3u8
+
+#EXTINF:-1 tvg-id="None" tvg-name="TRT SPOR" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", TRT SPOR 20:30 GALATASARAY - MANISA BB
+#EXTVLCOPT:http-user-agent=VAVOO/1.0
+#EXTVLCOPT:http-referrer=https://vavoo.to/
+https://vavoo.to/play/2781429267/index.m3u8
 
 #EXTINF:-1 tvg-id="None" tvg-name="A SPOR" tvg-logo="https://st4.depositphotos.com/11498520/21397/v/950/depositphotos_213977444-stock-illustration-soccer-ball-vector-football-logo.jpg" group-title="SPOR EKRANI", A SPOR 20:30 TÜRKIYE - KOSOVA
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
@@ -515,10 +530,15 @@ https://vavoo.to/play/2781429267/index.m3u8
 #EXTVLCOPT:http-referrer=https://vavoo.to/
 https://vavoo.to/play/2781429267/index.m3u8
 
-#EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 20:45 FENERBAHÇE BEKO - PARIS
+#EXTINF:-1 tvg-id="None" tvg-name="S SPORT" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", S SPORT 20:45 FENERBAHÇE BEKO - PARIS
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
 #EXTVLCOPT:http-referrer=https://vavoo.to/
-https://vavoo.to/play/2430655089/index.m3u8
+https://vavoo.to/play/3718336295/index.m3u8
+
+#EXTINF:-1 tvg-id="None" tvg-name="S SPORT" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", S SPORT 20:45 FENERBAHÇE BEKO - PARIS
+#EXTVLCOPT:http-user-agent=VAVOO/1.0
+#EXTVLCOPT:http-referrer=https://vavoo.to/
+https://vavoo.to/play/3718336295/index.m3u8
 
 #EXTINF:-1 tvg-id="None" tvg-name="FB TV" tvg-logo="https://t4.ftcdn.net/jpg/01/57/34/25/360_F_157342588_54ZpX48MoK3mdBh0PqnwWdQnMY3KDB29.jpg" group-title="SPOR EKRANI", FB TV 20:45 EUROLEAGUE ÖZEL MAÇ HAVASI
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
@@ -555,10 +575,15 @@ https://vavoo.to/play/2322888064/index.m3u8
 #EXTVLCOPT:http-referrer=https://vavoo.to/
 https://vavoo.to/play/2322888064/index.m3u8
 
-#EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 22:00 REGGIANA - PETKIMSPOR
+#EXTINF:-1 tvg-id="None" tvg-name="TIVIBU SPOR 2" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", TIVIBU SPOR 2 22:00 REGGIANA - PETKIMSPOR
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
 #EXTVLCOPT:http-referrer=https://vavoo.to/
-https://vavoo.to/play/2430655089/index.m3u8
+https://vavoo.to/play/478254799/index.m3u8
+
+#EXTINF:-1 tvg-id="None" tvg-name="TIVIBU SPOR 2" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", TIVIBU SPOR 2 22:00 REGGIANA - PETKIMSPOR
+#EXTVLCOPT:http-user-agent=VAVOO/1.0
+#EXTVLCOPT:http-referrer=https://vavoo.to/
+https://vavoo.to/play/478254799/index.m3u8
 
 #EXTINF:-1 tvg-id="None" tvg-name="TRT SPOR" tvg-logo="https://st4.depositphotos.com/11498520/21397/v/950/depositphotos_213977444-stock-illustration-soccer-ball-vector-football-logo.jpg" group-title="SPOR EKRANI", TRT SPOR 22:00 TÜRKIYE - GALLER
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
@@ -586,11 +611,6 @@ https://vavoo.to/play/1234604880/index.m3u8
 https://vavoo.to/play/1234604880/index.m3u8
 
 #EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://st4.depositphotos.com/11498520/21397/v/950/depositphotos_213977444-stock-illustration-soccer-ball-vector-football-logo.jpg" group-title="SPOR EKRANI", NBA TV 22:30 PORT VALE - BARROW
-#EXTVLCOPT:http-user-agent=VAVOO/1.0
-#EXTVLCOPT:http-referrer=https://vavoo.to/
-https://vavoo.to/play/2430655089/index.m3u8
-
-#EXTINF:-1 tvg-id="None" tvg-name="NBA TV" tvg-logo="https://w7.pngwing.com/pngs/37/428/png-transparent-basketball-tennis-balls-ball-sport-orange-sphere-thumbnail.png" group-title="SPOR EKRANI", NBA TV 22:45 ASVEL VILLEURBANNE - OLYMPIAKOS
 #EXTVLCOPT:http-user-agent=VAVOO/1.0
 #EXTVLCOPT:http-referrer=https://vavoo.to/
 https://vavoo.to/play/2430655089/index.m3u8
