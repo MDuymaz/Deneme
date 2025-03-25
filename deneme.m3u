@@ -1,8 +1,6 @@
-#EXTM3U
+#EXTM3U url-tvg="https://raw.githubusercontent.com/MDuymaz/Deneme/refs/heads/main/epg.xml"
 
-#EXTINF:-1 tvg-id="NICKELODEON HD" tvg-name="NICKELODEON HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/e/e9/A_Spor_logosu.png?20140920094553" tvg-language="Turkish" tvg-country="TR" group-title="CANLI",NICKELODEON HD
+#EXTINF:-1 tvg-id="NICKELODEON HD" tvg-name="NICKELODEON HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6c/Nickelodeon_Logo.png" tvg-language="Turkish" tvg-country="TR" group-title="CANLI",NICKELODEON HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 #EXTVLCOPT:http-referrer=https://golvar2014.sbs/
 https://playerpro.live/proxy.php?url=https://a.strmrdr-cf-worker-b3b0eb3f3e.workers.dev/bc2b05d321cb80050c5d035a9daeb26d/DmodYM9CdSNPUZyc2x7VWd/5003/a.strmrdr-cf-worker-b3b0eb3f3e.workers.dev/chunklist_hd.m3u8&referer=https://golvar2014.sbs/&origin=https://golvar2014.sbs/
-
-#EXTEPG: https://raw.githubusercontent.com/MDuymaz/Deneme/refs/heads/main/epg.xml
