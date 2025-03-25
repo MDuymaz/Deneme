@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+<tv generator-info-name="MyEPGProvider">
+    <channel id="kanal1">
+        <display-name>Kanal 1</display-name>
+        <icon src="https://example.com/kanal1_logo.png"/>
+    </channel>
+    <programme start="20250325120000 +0300" stop="20250325130000 +0300" channel="kanal1">
+        <title>Öğle Haberleri</title>
+        <desc>Günün en önemli gelişmeleri.</desc>
+        <category>Haber</category>
+    </programme>
+</tv>
