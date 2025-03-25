@@ -1,11 +1,8 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-name="Bugün 15:00 Nesibe Aydın - Fenerbahçe Opet (TRT Spor)" tvg-language="Turkish" tvg-country="TR" group-title="Basketbol",Bugün 15:00 Nesibe Aydın - Fenerbahçe Opet (TRT Spor)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
+#EXTINF:-1 tvg-id="NICKELODEON HD" tvg-name="NICKELODEON HD" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/e/e9/A_Spor_logosu.png?20140920094553" tvg-language="Turkish" tvg-country="TR" group-title="CANLI",NICKELODEON HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
 #EXTVLCOPT:http-referrer=https://golvar2014.sbs/
-https://playerpro.live/proxy.php?url=https%3A%2F%2Fa.strmrdr-cf-worker-b3b0eb3f3e.workers.dev%2Fbc2b05d321cb80050c5d035a9daeb26d%2FDmodYM9CdSNPUZyc2x7VWd%2F5032%2Fa.strmrdr-cf-worker-b3b0eb3f3e.workers.dev%2Fchunklist_hd.m3u8&referer=https%3A%2F%2Fgolvar2014.sbs%2F&origin=https%3A%2F%2Fgolvar2014.sbs%2Fnklist_hd.m3u8
+https://playerpro.live/proxy.php?url=https://a.strmrdr-cf-worker-b3b0eb3f3e.workers.dev/bc2b05d321cb80050c5d035a9daeb26d/DmodYM9CdSNPUZyc2x7VWd/5003/a.strmrdr-cf-worker-b3b0eb3f3e.workers.dev/chunklist_hd.m3u8&referer=https://golvar2014.sbs/&origin=https://golvar2014.sbs/
 
-#EXTINF:-1 tvg-name="Bugün 17:30 Tarsus Bld. - ÇBK Mersin (TRT Spor)" tvg-language="Turkish" tvg-country="TR" group-title="Basketbol",Bugün 17:30 Tarsus Bld. - ÇBK Mersin (TRT Spor)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5)
-#EXTVLCOPT:http-referrer=https://golvar2014.sbs/
-https://a.strmrdr-cf-worker-b3b0eb3f3e.workers.dev/bc2b05d321cb80050c5d035a9daeb26d/DmodYM9CdSNPUZyc2x7VWd/5032/a.strmrdr-cf-worker-b3b0eb3f3e.workers.dev/chunklist_hd.m3u8
+#EXTEPG: https://raw.githubusercontent.com/MDuymaz/Deneme/refs/heads/main/epg.xml
